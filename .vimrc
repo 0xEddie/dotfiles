@@ -38,12 +38,6 @@ map <leader>I :setlocal noautoindent<CR>
 " leader after hitting 'o' or 'O' in Normal mode.
 set formatoptions-=tc
 
-" Shortcutting split navigation
-"map <C-h> <C-w>h
-"map <C-j> <C-w>j
-"map <C-k> <C-w>k
-"map <C-l> <C-w>l
-
 " Alias to 'global replace all' to <leader>s
 nnoremap <leader>s :%s//gI<Left><Left><Left>
 
