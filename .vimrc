@@ -5,8 +5,8 @@ set nocompatible
 syntax on
 set encoding=utf-8 " vim default: 'latin1' or value from $LANG
 set number relativenumber
-set termguicolors " vim default: off
-colorscheme darkblue
+"set termguicolors " vim default: off
+colorscheme slate
 set mouse=a "enable mouse in all modes
 " Use system clipboard (needs xclip or xsel installed as well)
 " set clipboard+=unnamedplus
@@ -52,13 +52,17 @@ nnoremap <leader>q :wq<CR>
 nnoremap <leader>w :w<CR>
 
 " Highlight cursor row and column
-set cursorline
-set cursorcolumn
+"set cursorline
+"set cursorcolumn
 highlight CursorLine guibg=#2b2b2b
 highlight CursorColumn guibg=#2b2b2b
 
 " Autocompletion, similar to bash autocomplete
 set wildmode=longest,list,full
 
-" Fix new window splitting
+" Change splitting to work like VS Code
 set splitbelow splitright
+
+" Vmap for maintaining Visual Mode after shifting > and <
+vmap < <gv
+vmap > >gv
