@@ -1,5 +1,5 @@
 # Basic aliases
-alias cd="cd ~"
+alias h="cd ~"
 alias ..="cd .."
 alias ...="cd ..."
 alias ....="cd ...."
