@@ -70,9 +70,13 @@ export LESS='--quit-if-one-screen --ignore-case --status-column --LONG-PROMPT --
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Source aliases
+# Source bash aliases
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
-. ~/.config/bash/aliases
+if [ -f ~/.bashrc ]; then
+    source ~/.bashrc
+elif [ -f ~/.config/bash/aliases ]; then
+    source ~/.config/bash/aliases
+fi
 
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
