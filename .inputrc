@@ -1,0 +1,20 @@
+# GNU Readline Library - https://tiswww.case.edu/php/chet/readline/rluserman.html
+
+# don't overwrite /etc/inputrc
+$include /etc/inputrc
+
+# https://www.topbug.net/blog/2017/07/31/inputrc-for-humans/
+# sets readline to display possible completions - different file types = diff colors
+set colored-stats on
+# auto completion to ignore cases
+set completion-ignore-case on
+# maximum # of chars displayed in completions for the common prefix
+set completion-prefix-display-length 5
+# every symlink completion has slash appended
+set mark-symlinked-directories on
+# if >1 possible completion, display all options
+set show-all-if-ambiguous on
+# if >1 possible completion but no partial completion, display all options
+set show-all-if-unmodified on
+# set completions to be appended by chars indicating their file types reported by the stat system call
+set visible-stats on
